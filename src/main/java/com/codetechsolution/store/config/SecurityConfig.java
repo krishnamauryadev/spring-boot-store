@@ -54,8 +54,16 @@ public class SecurityConfig {
             .sessionManagement(c->c.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .csrf(c->c.disable())
             .authorizeHttpRequests(c->c
+                    .requestMatchers("/swagger-ui/**").permitAll()
+                    .requestMatchers("/swagger-ui.html").permitAll()
+                    .requestMatchers("/v3/api-doc/**").permitAll()
                     .requestMatchers("/admin/**").hasRole(Role.ADMIN.name())
-                        .requestMatchers(HttpMethod.POST,"/users").permitAll()
+                    .requestMatchers(HttpMethod.GET,"/products/**").permitAll()
+                    .requestMatchers(HttpMethod.POST,"/products/**").hasRole(Role.ADMIN.name())
+                    .requestMatchers(HttpMethod.PUT,"/products/**").hasRole(Role.ADMIN.name())
+                    .requestMatchers(HttpMethod.DELETE,"/products/**").hasRole(Role.ADMIN.name())
+
+                    .requestMatchers(HttpMethod.POST,"/users").permitAll()
                     .requestMatchers(HttpMethod.POST,"/auth/login").permitAll()
                     .requestMatchers(HttpMethod.POST,"/auth/refresh").permitAll()
                     .requestMatchers(HttpMethod.POST,"/checkout/webhook").permitAll()
