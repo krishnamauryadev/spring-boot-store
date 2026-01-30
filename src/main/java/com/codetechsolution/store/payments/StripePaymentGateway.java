@@ -1,8 +1,7 @@
 package com.codetechsolution.store.payments;
 
-import com.codetechsolution.store.entities.Order;
-import com.codetechsolution.store.entities.OrderItem;
-import com.codetechsolution.store.entities.PaymentStatus;
+import com.codetechsolution.store.orders.Order;
+import com.codetechsolution.store.orders.OrderItem;
 import com.stripe.exception.SignatureVerificationException;
 import com.stripe.exception.StripeException;
 import com.stripe.model.Event;

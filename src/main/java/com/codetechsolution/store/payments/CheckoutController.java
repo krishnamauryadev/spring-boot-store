@@ -1,9 +1,9 @@
 package com.codetechsolution.store.payments;
 
-import com.codetechsolution.store.dtos.ErrorDto;
-import com.codetechsolution.store.exceptions.CartEmptyException;
-import com.codetechsolution.store.exceptions.CartNotFoundException;
-import com.codetechsolution.store.repositores.OrderRepository;
+import com.codetechsolution.store.common.ErrorDto;
+import com.codetechsolution.store.carts.CartEmptyException;
+import com.codetechsolution.store.carts.CartNotFoundException;
+import com.codetechsolution.store.orders.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

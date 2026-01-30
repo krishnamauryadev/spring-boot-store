@@ -1,7 +1,7 @@
 package com.codetechsolution.store.payments;
 
 
-import com.codetechsolution.store.entities.Order;
+import com.codetechsolution.store.orders.Order;
 
 import java.util.Optional;
 

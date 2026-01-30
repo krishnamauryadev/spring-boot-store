@@ -1,12 +1,12 @@
 package com.codetechsolution.store.payments;
 
-import com.codetechsolution.store.entities.Order;
-import com.codetechsolution.store.exceptions.CartEmptyException;
-import com.codetechsolution.store.exceptions.CartNotFoundException;
-import com.codetechsolution.store.repositores.CartRepository;
-import com.codetechsolution.store.repositores.OrderRepository;
-import com.codetechsolution.store.services.AuthService;
-import com.codetechsolution.store.services.CartService;
+import com.codetechsolution.store.orders.Order;
+import com.codetechsolution.store.carts.CartEmptyException;
+import com.codetechsolution.store.carts.CartNotFoundException;
+import com.codetechsolution.store.carts.CartRepository;
+import com.codetechsolution.store.orders.OrderRepository;
+import com.codetechsolution.store.auth.AuthService;
+import com.codetechsolution.store.carts.CartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
