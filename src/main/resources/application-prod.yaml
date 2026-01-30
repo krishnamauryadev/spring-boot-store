@@ -1,5 +1,5 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/store?createDatabaseIfNotExist=true
+    url: ${SPRING_DATASOURCE_URL}
 
 websiteUrl: http://localhost:4242
